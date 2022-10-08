@@ -10,8 +10,8 @@ class ChessBoardBloc extends Bloc<ChessBoardEvent, ChessBoardState> {
   }
 
   // void _onPlayerMoved(
-    // ChessBoardPlayerMovedEvent event,
-    // Emitter<ChessBoardState> emit,
+  // ChessBoardPlayerMovedEvent event,
+  // Emitter<ChessBoardState> emit,
   // ) {
 
   // }
