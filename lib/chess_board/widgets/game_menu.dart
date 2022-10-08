@@ -3,9 +3,7 @@ import 'package:flutter_chess_board/flutter_chess_board.dart';
 import 'package:provider/provider.dart';
 
 class GameMenu extends StatelessWidget {
-  const GameMenu({
-    super.key,
-  });
+  const GameMenu({super.key});
 
   @override
   Widget build(BuildContext context) {
