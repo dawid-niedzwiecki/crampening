@@ -18,7 +18,7 @@ This project contains 3 flavors:
 - staging
 - production
 
-To run the desired flavor either use the launch configuration in VSCode/Android Studio or use the following commands:
+To run the desired flavor either use the launch configuration in VSCode or use the following commands:
 
 ```sh
 # Development
@@ -31,7 +31,7 @@ $ flutter run --flavor staging --target lib/main_staging.dart
 $ flutter run --flavor production --target lib/main_production.dart
 ```
 
-_\*Crampening works on iOS, Android, Web, and Windows._
+_\*Crampening works Web._
 
 ---
 
