@@ -12,40 +12,34 @@ class ChessBoardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => ChessBoardBloc(),
-      child: Container(),
+      child: ChangeNotifierProvider<ChessBoardController>(
+        lazy: false,
+        create: (context) => ChessBoardController(),
+        child: const ChessBoardView(),
+      ),
     );
   }
 }
 
-class ChessBoardView extends StatefulWidget {
+class ChessBoardView extends StatelessWidget {
   const ChessBoardView({super.key});
 
   @override
-  State<ChessBoardView> createState() => _ChessBoardViewState();
-}
-
-class _ChessBoardViewState extends State<ChessBoardView> {
-  final chessController = ChessBoardController();
-
-  @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<ChessBoardController>(
-      create: (context) => chessController,
-      child: Scaffold(
-        body: Center(
-          child: Row(
-            children: [
-              const Expanded(
-                child: GameMenu(),
-              ),
-              ChessBoard(
-                controller: chessController,
-              ),
-              const Expanded(
-                child: SaveMenu(),
-              ),
-            ],
-          ),
+    return Scaffold(
+      body: Center(
+        child: Row(
+          children: [
+            const Expanded(
+              child: GameMenu(),
+            ),
+            ChessBoard(
+              controller: context.select((ChessBoardController c) => c),
+            ),
+            const Expanded(
+              child: SaveMenu(),
+            ),
+          ],
         ),
       ),
     );

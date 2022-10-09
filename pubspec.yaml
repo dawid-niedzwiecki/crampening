@@ -13,7 +13,10 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.1
-  flutter_chess_board: ^1.0.1
+  flutter_chess_board:
+    git: 
+      url: https://github.com/dawid-niedzwiecki/flutter_chess_board.git
+      ref: master
   flutter_localizations:
     sdk: flutter
   intl: ^0.17.0

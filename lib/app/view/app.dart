@@ -29,7 +29,7 @@ class App extends StatelessWidget {
         GlobalMaterialLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const ChessBoardView(),
+      home: const ChessBoardPage(),
     );
   }
 }

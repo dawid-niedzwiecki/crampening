@@ -149,9 +149,11 @@ packages:
   flutter_chess_board:
     dependency: "direct main"
     description:
-      name: flutter_chess_board
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "."
+      ref: master
+      resolved-ref: "65ecebc887c0834df6186c6038684cc2107ac264"
+      url: "https://github.com/dawid-niedzwiecki/flutter_chess_board.git"
+    source: git
     version: "1.0.1"
   flutter_localizations:
     dependency: "direct main"
