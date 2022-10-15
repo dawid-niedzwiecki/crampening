@@ -7,9 +7,6 @@ abstract class ChessBoardEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class ChessBoardPlayerMovedEvent extends ChessBoardEvent {
-  const ChessBoardPlayerMovedEvent();
-
-  @override
-  List<Object> get props => [];
+class ChessBoardDataRequestedEvent extends ChessBoardEvent {
+  const ChessBoardDataRequestedEvent();
 }

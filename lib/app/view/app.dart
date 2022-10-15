@@ -1,3 +1,4 @@
+import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -6,6 +7,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import '../../chess_board/chess_board.dart';
 import '../../l10n/l10n.dart';
 import '../../remote_config/remote_config.dart';
+import '../../repositories/realtime.dart';
 import '../../repositories/remote_config.dart';
 
 class App extends StatelessWidget {
@@ -19,6 +21,11 @@ class App extends StatelessWidget {
           lazy: false,
           create: (context) => RemoteConfigRepository(
             remoteConfig: FirebaseRemoteConfig.instance,
+          ),
+        ),
+        RepositoryProvider(
+          create: (context) => RealtimeRepository(
+            firebaseDatabase: FirebaseDatabase.instance,
           ),
         ),
       ],

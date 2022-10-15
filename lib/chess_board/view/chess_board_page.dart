@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_chess_board/flutter_chess_board.dart';
 import 'package:provider/provider.dart';
 
+import '../../repositories/realtime.dart';
 import '../bloc/chess_board_bloc.dart';
 import '../widgets/widgets.dart';
 
@@ -12,7 +13,9 @@ class ChessBoardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => ChessBoardBloc(),
+      create: (context) => ChessBoardBloc(
+        realtimeRepository: RepositoryProvider.of<RealtimeRepository>(context),
+      ),
       child: ChangeNotifierProvider<ChessBoardController>(
         lazy: false,
         create: (context) => ChessBoardController(),
