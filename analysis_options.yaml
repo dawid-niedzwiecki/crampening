@@ -1,29 +1,24 @@
 include: package:very_good_analysis/analysis_options.3.1.0.yaml
 
-analyzer:
-  plugins:
-    - dart_code_metrics
-
 linter:
   rules:
+    prefer_single_quotes: true
+    cancel_subscriptions: true
+    empty_constructor_bodies: true
+    leading_newlines_in_multiline_strings: true
+    prefer_contains: true
+    prefer_mixin: true
+    sized_box_for_whitespace: true
+    sized_box_shrink_expand: true
+    slash_for_doc_comments: true
+    sort_child_properties_last: true
+    sort_constructors_first: true
+    unnecessary_lambdas: true
+    unnecessary_string_interpolations: true
+    use_string_buffers: true
+    sort_pub_dependencies: true
+    avoid_return_types_on_setters: true
+    prefer_relative_imports: true
+    always_use_package_imports: false
     public_member_api_docs: false
-
-dart_code_metrics:
-  extends: package:very_good_analysis/analysis_options.3.1.0.yaml
-  anti-patterns:
-    - long-method
-    - long-parameter-list
-  metrics:
-    cyclomatic-complexity: 20
-    maximum-nesting-level: 5
-    number-of-parameters: 4
-    source-lines-of-code: 50
-  metrics-exclude:
-    - test/**
-  rules:
-    - newline-before-return
-    - no-boolean-literal-compare
-    - no-empty-block
-    - prefer-trailing-comma
-    - prefer-conditional-expressions
-    - no-equal-then-else
+    constant_identifier_names: false

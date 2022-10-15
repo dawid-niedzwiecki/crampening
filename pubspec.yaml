@@ -26,7 +26,6 @@ dependencies:
 
 dev_dependencies:
   bloc_test: ^9.1.0
-  dart_code_metrics: ^4.21.0
   flutter_test:
     sdk: flutter
   mocktail: ^0.3.0

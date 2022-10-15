@@ -1,5 +1,5 @@
-import 'package:crampening/app/app.dart';
-import 'package:crampening/bootstrap.dart';
+import 'app/app.dart';
+import 'bootstrap.dart';
 
 void main() {
   bootstrap(() => const App());

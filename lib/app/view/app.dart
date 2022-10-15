@@ -1,11 +1,12 @@
-import 'package:crampening/chess_board/chess_board.dart';
-import 'package:crampening/l10n/l10n.dart';
-import 'package:crampening/remote_config/remote_config.dart';
-import 'package:crampening/repositories/remote_config.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+
+import '../../chess_board/chess_board.dart';
+import '../../l10n/l10n.dart';
+import '../../remote_config/remote_config.dart';
+import '../../repositories/remote_config.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

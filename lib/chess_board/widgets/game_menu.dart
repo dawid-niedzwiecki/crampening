@@ -1,8 +1,9 @@
-import 'package:crampening/remote_config/bloc/remote_config_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_chess_board/flutter_chess_board.dart';
 import 'package:provider/provider.dart';
+
+import '../../remote_config/bloc/remote_config_bloc.dart';
 
 class GameMenu extends StatelessWidget {
   const GameMenu({super.key});

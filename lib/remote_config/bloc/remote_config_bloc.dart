@@ -1,8 +1,9 @@
 // ignore_for_file: require_trailing_commas
 
 import 'package:bloc/bloc.dart';
-import 'package:crampening/repositories/remote_config.dart';
 import 'package:equatable/equatable.dart';
+
+import '../../repositories/remote_config.dart';
 
 part 'remote_config_event.dart';
 part 'remote_config_state.dart';
